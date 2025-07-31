@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informazioni - Ferr Ragazzo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Preloader */
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+        
+        .preloader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid var(--primary-color, #2c3e50);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="loader"></div>
+    </div>
+        <header>
+            <h1>Ferramenta Ragazzo</h1>
+            <div class="header-buttons">
+                <button onclick="window.location.href='index.html'">Home</button>
+            </div>
+        </header>
+        <div class="container">
+            <h1>INFO</h1>
+            <div class="content-section">
+            <div id="storia">
+                <p>1 SETTEMBRE 2020 abbiamo raggiunto un sorprendente obiettivo... 50 ANNI di ATTIVITA' Siamo presenti sul nostro territorio dal 1970, con il tempo abbiamo ampliato sempre di più la gamma di prodotti,  con la necessità, quindi, di cercare strutture sempre più grandi, ma rimanendo sempre a Palazzolo. Oltre alla vendita di prodotti di Ferramenta, Colori e Casalinghi, con gli anni ci siamo specializzati nella vendita ed installazione di ZANZARIERE di vario tipo per ogni esigenza. Nella nostra gamma di prodotti, puoi trovare: Scale, Cilindri, Serrature, Accessori per giardinaggio, Raccordi, Cassette posta, Utensili manuali ed elettrici.. Materiale elettrico: spine, prese, ciabatte, prolunghe... , Tovagliato cerato, Detergenti per la casa, sia professionali che Biologici (in bottiglia o sfusi) Bottiglie scure per olio o trasparenti in varie misure Lattine per olio 2lt - 3lt - 5lt Fusti olio da 10lt fino a 50lt e tanto altro.....</p>
+            </div>
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Via prele 11, 37060, Sona</p>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>045 6080042</p>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>info@ferramentaragazzo.it</p>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-clock"></i>
+                    <p>Lun-Ven: 8:30-12:30, 15:00-19:00</p>
+                </div>
+            </div>
+            
+            <div class="features-section">
+                <h2>I nostri servizi</h2>
+                <ul class="features-list">
+                    <p><i class="fas fa-tools"></i> Vendita prodotti di ferramenta</p>
+                    <p><i class="fas fa-paint-roller"></i> Vendita colori e vernici</p>
+                    <p><i class="fas fa-home"></i> Vendita articoli per la casa</p>
+                    <p><i class="fas fa-bug"></i> Installazione zanzariere</p>
+                    <p><i class="fas fa-key"></i> Duplicazione chiavi</p>
+                    <p><i class="fas fa-truck-loading"></i> Consegna a domicilio</p>
+                </ul>
+            </div>
+            
+            <div class="newsletter-section">
+                <h2>Iscriviti alla newsletter</h2>
+                <div class="newsletter-form">
+                    <div class="input-icon-wrapper">
+                        <i class="far fa-envelope"></i>
+                        <input type="email" placeholder="La tua email" required>
+                    </div>
+                    <button type="submit"><i class="fas fa-paper-plane"></i> Iscriviti</button>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+        // Hide preloader when page is loaded
+        window.addEventListener('load', function() {
+            const preloader = document.getElementById('preloader');
+            setTimeout(function() {
+                preloader.classList.add('hidden');
+            }, 500);
+        });
+        
+        // Add hover effect to feature items
+        document.querySelectorAll('.features-list li').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.classList.add('active');
+            });
+            item.addEventListener('mouseleave', function() {
+                this.classList.remove('active');
+            });
+        });
+        
+        // Add smooth scrolling to all links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && document.querySelector(href)) {
+                    e.preventDefault();
+                    document.querySelector(href).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+    </body>
+</html>
