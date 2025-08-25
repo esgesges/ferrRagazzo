@@ -6,47 +6,9 @@
     <title>Informazioni - Ferr Ragazzo</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* Preloader */
-        .preloader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            transition: opacity 0.5s ease, visibility 0.5s ease;
-        }
-        
-        .preloader.hidden {
-            opacity: 0;
-            visibility: hidden;
-        }
-        
-        .loader {
-            width: 50px;
-            height: 50px;
-            border: 5px solid #f3f3f3;
-            border-top: 5px solid var(--primary-color, #2c3e50);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-        
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-    </style>
+
 </head>
 <body>
-    <!-- Preloader -->
-    <div class="preloader" id="preloader">
-        <div class="loader"></div>
-    </div>
         <header>
             <h1>Ferramenta Ragazzo</h1>
             <div class="header-buttons">
@@ -103,13 +65,6 @@
         </div>
         
         <script>
-        // Hide preloader when page is loaded
-        window.addEventListener('load', function() {
-            const preloader = document.getElementById('preloader');
-            setTimeout(function() {
-                preloader.classList.add('hidden');
-            }, 500);
-        });
         
         // Add hover effect to feature items
         document.querySelectorAll('.features-list li').forEach(item => {
@@ -121,18 +76,7 @@
             });
         });
         
-        // Add smooth scrolling to all links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const href = this.getAttribute('href');
-                if (href !== '#' && document.querySelector(href)) {
-                    e.preventDefault();
-                    document.querySelector(href).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
+        // No smooth scrolling
     </script>
     </body>
 </html>
