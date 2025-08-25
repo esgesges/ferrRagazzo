@@ -1,5 +1,5 @@
 header{
-    background-color: darkcyan;
+    background-color: orange;
     color: white;
     display: flex;
     align-items: center;
@@ -20,7 +20,7 @@ header{
 
 button{
     padding: 10px 20px 10px 20px;
-    background-color: rgb(235, 134, 255);
+    background-color: white;
     border: 3px solid black;
     border-radius: 20px;
     width: 100px;
