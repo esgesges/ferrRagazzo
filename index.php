@@ -1,5 +1,5 @@
 <?php
-    $conn = mysqli_connect("localhost", "root", "", "ferramentaragazzo");
+    $conn = mysqli_connect("100.70.0.1", "root", "password", "ferramentaragazzo");
     if (!$conn) {
         die("Connection failed: " . mysqli_connect_error());
     }
@@ -47,7 +47,7 @@
                     $result = $conn->query($sql);
                     if ($result) {
                         while ($row = mysqli_fetch_assoc($result)) {
-                            $rows[] = 'img/' . $row['path'];
+                            $rows[] = '' . $row['path'];
                             $titles[] = $row['titolo'];
                             $descs[] = $row['descrizione'];
                         }
